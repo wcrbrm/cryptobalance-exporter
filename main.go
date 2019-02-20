@@ -24,8 +24,7 @@ func main() {
 
 	//Registering the defined metric with Prometheus
 	prometheus.Register(histogram)
-
-	log.Fatal(http.ListenAndServe(":8009", router))
+	log.Fatal(http.ListenAndServe(":8010", router))
 }
 
 func Sayhello(histogram *prometheus.HistogramVec) http.HandlerFunc {
